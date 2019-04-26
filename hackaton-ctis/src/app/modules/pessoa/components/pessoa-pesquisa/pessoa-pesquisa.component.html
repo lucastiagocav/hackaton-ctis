@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <h2>PESQUISAR PESSOA</h2>
+  <p></p>
+  <div class="row">
+    <div class="col-sm-8">
+      <input type="search" class="form-control" placeholder="Pesquisar Pessoa(s)">
+    </div>
+    <div class="col-sm-4">
+      <button type="submit" class="btn btn-light">Procurar</button>
+      <button type="submit" routerLink="cadastrar" class="btn btn-info ml-2">Cadastrar</button>
+    </div>
+
+  </div>
+  <hr>
+  <div class="row mb-2" *ngFor="let pessoa of pessoas">
+    <div class="col-sm-8" >
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-6">
+              <strong>Nome: </strong> {{pessoa.nome}},
+              <strong>ID: </strong> {{pessoa.id}}
+
+            </div>
+
+            <div class="col-6" align="right">
+              <button type="button" routerLink="visualizar/{{pessoa.id}}" class="btn btn-info btn-sm">Visualizar</button>
+              <button type="button" routerLink="editar/{{pessoa.id}}" class="btn btn-dark ml-2 btn-sm">Editar</button>
+              <button type="button" routerLink="id" class="btn btn-danger ml-2 btn-sm">Excluir</button>
+              
+            </div>
+
+          </div>
+        </div>
+        <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

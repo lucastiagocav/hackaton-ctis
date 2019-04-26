@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <h2>PESQUISAR PRODUTO</h2>
+  <p></p>
+  <div class="row">
+    <div class="col-sm-8">
+      <input type="text" class="form-control" placeholder="Pesquisar Produto(s)">
+    </div>
+    <div class="col-sm-4">
+      <button type="submit" class="btn btn-light">Procurar</button>
+      <button type="submit" routerLink="cadastrar" class="btn btn-primary ml-2 btn-info">Cadastrar</button>
+    </div>
+
+  </div>
+  <hr>
+  <div class="row">
+    <div class=" col-sm-8">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-6">
+              <strong>Nome do Produto: </strong> Mesa de Sinuca,
+              <strong>ID</strong>: 1 .
+
+            </div>
+
+            <div class="col-6" align="right">
+              <button type="button" routerLink="visualizar/:id" class="btn btn-info btn-sm">Visualizar</button>
+              <button type="button" routerLink="editar/:id" class="btn btn-dark ml-2 btn-sm">Editar</button>
+              <button type="button" routerLink="id" class="btn btn-danger ml-2 btn-sm">Excluir</button>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+
+        </div>
+      </div>
+
+    </div>
