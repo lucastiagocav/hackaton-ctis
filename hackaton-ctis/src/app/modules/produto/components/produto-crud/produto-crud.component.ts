@@ -7,9 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./produto-crud.component.scss']
 })
 export class ProdutoCrudComponent implements OnInit {
-
   formularioProduto: FormGroup;
-  id: number;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private routeatv: ActivatedRoute) { }
 
@@ -40,6 +38,10 @@ export class ProdutoCrudComponent implements OnInit {
 
   carregaDados(){
 
+  }
+  
+  addProduto(){
+    
   }
 
   apresentarView(){

@@ -6,7 +6,7 @@
         <input type="text" class="form-control" placeholder="Pesquisar Empresa(s)">
       </div>
       <div class="col-sm-4">
-        <button type="submit" class="btn btn-light">Procurar</button>
+        <button type="submit" class="btn btn-light" (click)="listarEmpresas()">Procurar</button>
         <button type="submit" routerLink="cadastrar" class="btn ml-2 btn-info">Cadastrar</button>
       </div>
   
@@ -18,15 +18,15 @@
           <div class="card-header">
             <div class="row">
               <div class="col-6">
-                <strong>Nome da Empresa: </strong> {{empresa.nomeEmpresa}},
-                <strong>ID</strong>: {{empresa.id}}
+                <strong>ID</strong>: {{empresa.id}} |
+                <strong>Nome da Empresa: </strong> {{empresa.nomeEmpresa}}
   
               </div>
   
               <div class="col-6" align="right">
                 <button type="button" routerLink="visualizar/:id" class="btn btn-info btn-sm">Visualizar</button>
                 <button type="button" routerLink="editar/:id" class="btn btn-dark ml-2 btn-sm">Editar</button>
-                <button type="button" routerLink="id" class="btn btn-danger ml-2 btn-sm">Excluir</button>
+                <button type="button" routerLink="id" class="btn btn-danger ml-2 btn-sm" >Excluir</button>
   
               </div>
   

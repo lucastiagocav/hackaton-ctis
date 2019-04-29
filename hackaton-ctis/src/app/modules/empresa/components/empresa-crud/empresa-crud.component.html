@@ -7,19 +7,19 @@
       <h4>Dados Empresariais</h4>
       <form [formGroup]="formulario">
         <label for="nome" class="control-label">Razão Social</label>
-        <input type="text" class="form-control" placeholder="Razão Social" formControlName='razaoSocial'>
+        <input type="text" class="form-control" placeholder="digite a Razão Social" formControlName='razaoSocial'>
 
-        <label for="sobrenome" class="control-label">Nome Fantasia</label>
-        <input type="text" class="form-control" placeholder="Nome Fantasia" formControlName='nomeFantasia'>
+        <label for="nomeFantasia" class="control-label">Nome Fantasia</label>
+        <input type="text" class="form-control" placeholder="Digite o nome Fantasia" formControlName='nomeFantasia'>
 
-        <label for="cpf" class="control-label">Email</label>
-        <input type="text" class="form-control" placeholder="empresa@email.com" formControlName='email'>
+        <label for="email" class="control-label">Email</label>
+        <input type="text" class="form-control" placeholder="Digite o Email" formControlName='email'>
 
-        <label for="email" class="control-label">CNPJ</label>
-        <input type="text" class="form-control" placeholder="nome@email.com" formControlName='cnpj'>
+        <label for="CNPJ" class="control-label">CNPJ</label>
+        <input type="text" class="form-control" idMask="99.999.999/9999-99" placeholder="Digite o CNPJ" formControlName='cnpj'>
 
         <label for="telefone" class="control-label">Telefone</label>
-        <input type="text" class="form-control" placeholder="ex: (11) 9000-1000" formControlName='telefoneEmpresa'>
+        <input type="text" class="form-control" placeholder="Digite o Telefone" formControlName='telefoneEmpresa'>
 
       </form>
     </div>
@@ -39,7 +39,7 @@
 
 
         <label for="complemento" class="control-label">Complemento</label>
-        <input type="text" class="form-control" placeholder="ex: apartamento" formControlName='complemento'>
+        <input type="text" class="form-control" placeholder="" formControlName='complemento'>
 
         <label for="cidade" class="control-label">Cidade</label>
         <input type="text" class="form-control" formControlName='cidade'>
@@ -49,7 +49,7 @@
       </form>
 
     </div>
-      <button type="button" class="btn btn-primary btn-lg">Confirmar</button>
+      <button type="button" class="btn btn-primary btn-lg" (click)="addEmpresa()">Confirmar</button>
       <button type="button" routerLink="" class="btn btn-secondary btn-lg ml-2">Cancelar</button>
     </div>
 </div>

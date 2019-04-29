@@ -7,20 +7,20 @@
       <h4>Dados do Produto</h4>
       <form [formGroup]="formularioProduto">
         <label for="nome" class="control-label">Nome do Produto</label>
-        <input type="text" class="form-control" placeholder="Nome" formControlName='nome'>
+        <input type="text" class="form-control" placeholder="Digite o nome do produto" formControlName='nome'>
 
         <label for="preco" class="control-label">Preço</label>
-        <input type="text" class="form-control" placeholder="R$ 0,00" formControlName='preco'>
+        <input type="text" class="form-control" valueMask placeholder="Digite o preço do produto" formControlName='preco'>
 
         <label for="dataFabricacao" class="control-label">Data de Fabricação</label>
-        <input type="text" class="form-control" placeholder="01/01/2019" formControlName='dataFabricacao'>
+        <input type="text" class="form-control" placeholder="Digite a data de Fabricação" formControlName='dataFabricacao'>
 
         <label for="categoria" class="control-label">Categoria</label>
-        <input type="text" class="form-control" placeholder="ex: Eletrônicos" formControlName='categoria'>
-      <p>&nbsp;</p>
+        <input type="text" class="form-control" placeholder="Digite a categoria" formControlName='categoria'>
       </form>
+      <p>&nbsp;</p>
     </div>
-    <button type="button" class="btn btn-primary btn-lg">Confirmar</button>
+    <button type="button" class="btn btn-primary btn-lg" (click)="addProduto()">Confirmar</button>
 
     <button type="button" routerLink="" class="btn btn-secondary btn-lg ml-2">Cancelar</button>
 

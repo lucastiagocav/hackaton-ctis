@@ -6,27 +6,27 @@
       <input type="text" class="form-control" placeholder="Pesquisar Produto(s)">
     </div>
     <div class="col-sm-4">
-      <button type="submit" class="btn btn-light">Procurar</button>
+      <button type="submit" class="btn btn-light" (click)="listarProdutos()">Procurar</button>
       <button type="submit" routerLink="cadastrar" class="btn btn-primary ml-2 btn-info">Cadastrar</button>
     </div>
 
   </div>
   <hr>
-  <div class="row">
+  <div class="row mb-2" *ngFor="let produto of produtos">
     <div class=" col-sm-8">
       <div class="card">
         <div class="card-header">
           <div class="row">
             <div class="col-6">
-              <strong>Nome do Produto: </strong> Mesa de Sinuca,
-              <strong>ID</strong>: 1 .
+              <strong>ID</strong>: {{produto.id}}  |
+              <strong>Nome do Produto: </strong> {{produto.nome}}
 
             </div>
 
             <div class="col-6" align="right">
-              <button type="button" routerLink="visualizar/:id" class="btn btn-info btn-sm">Visualizar</button>
-              <button type="button" routerLink="editar/:id" class="btn btn-dark ml-2 btn-sm">Editar</button>
-              <button type="button" routerLink="id" class="btn btn-danger ml-2 btn-sm">Excluir</button>
+              <button type="button" routerLink="visualizar/{{produto.id}}" class="btn btn-info btn-sm">Visualizar</button>
+              <button type="button" routerLink="editar/{{produto.id}}" class="btn btn-dark ml-2 btn-sm">Editar</button>
+              <button type="button" routerLink="" class="btn btn-danger ml-2 btn-sm" (click)="deletarProduto()">Excluir</button>
 
             </div>
 

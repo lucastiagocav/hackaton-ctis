@@ -5,6 +5,8 @@ import { EmpresaRoutingModule } from './empresa-routing.module';
 import { EmpresaCrudComponent } from './components/empresa-crud/empresa-crud.component';
 import { EmpresaPesquisaComponent } from './components/empresa-pesquisa/empresa-pesquisa.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SharedDirectivesModule } from 'src/app/shared/shared-directives/shared-directives.module';
+import { EmpresaService } from './services/empresa.service';
 
 @NgModule({
   declarations: [ EmpresaCrudComponent, EmpresaPesquisaComponent],
@@ -12,7 +14,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     CommonModule,
     EmpresaRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SharedDirectivesModule
+    
+  ],
+  providers: [
+    EmpresaService
   ]
 })
 export class EmpresaModule { }

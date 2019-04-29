@@ -1,7 +1,6 @@
-const API_URL = 'http://localhost:4200';
+export const API_URL = 'http://192.168.91.229:8080/hackathon-backend/api/v1/';
 
-const PESSOA = 'pessoa';
-const PESSOA_CADASTRAR = 'pessoa/cadastrar';
+export const PESSOAS = 'pessoas';
 
-const EMPRESA = 'empresa';
-const PRODUTO = 'produto';
+export const EMPRESAS = 'empresas';
+export const PRODUTOS = 'produtos';

@@ -34,7 +34,6 @@ export class PessoaCrudComponent implements OnInit {
 
   apresentarView() {
     if (this.router.url.indexOf('pessoa/visualizar') > -1) {
-      //pessoa/visualizar/12
       this.carregaDados();
       this.formulario.disable();
     } else if (this.router.url.indexOf('pessoa/editar') > -1) {
@@ -44,11 +43,6 @@ export class PessoaCrudComponent implements OnInit {
 
   criarFormulario() {
     this.formulario = this.formBuilder.group({
-      nome: [''],
-      sobrenome: [''],
-      cpf: [''],
-      email: [''],
-
       rua: [''],
       bairro: [''],
       numero: [''],
@@ -56,9 +50,19 @@ export class PessoaCrudComponent implements OnInit {
       cidade: [''],
       estado: [''],
 
+      nome: [''],
+      sobrenome: [''],
+      cpf: [''],
+      email: [''],
+
       telefone: [''],
 
 
     })
+  }
+  addPessoa(){
+  }
+
+  deletarPessoa(){
   }
 }

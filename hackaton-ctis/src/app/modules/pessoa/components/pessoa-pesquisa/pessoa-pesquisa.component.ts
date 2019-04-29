@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { PessoaService } from '../../services/pessoa.service';
+import { PessoaModels } from '../../models/pessoa-models';
 
 @Component({
   selector: 'app-pessoa-pesquisa',
@@ -7,19 +8,17 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./pessoa-pesquisa.component.scss']
 })
 export class PessoaPesquisaComponent implements OnInit {
-  pessoas = [
-    {
-      nome: 'Lucas',
-      id: 1
-    },
-    {
-      nome: 'Douglas',
-      id: 2
-    }
-  ];
-  constructor() { }
+  pessoas : PessoaModels[];
+  constructor(private service: PessoaService) { }
 
   ngOnInit() {
+
   }
+
+  listaDePessoas(){
+    this.service.get().subscribe(res => this.pessoas = res);
+  }
+
+
 
 }

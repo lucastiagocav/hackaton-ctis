@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GenericHttpService } from './generic-http.service';
+import { PessoaService } from './pessoa.service';
 
-describe('GenericHttpService', () => {
+describe('PessoaService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: GenericHttpService = TestBed.get(GenericHttpService);
+    const service: PessoaService = TestBed.get(PessoaService);
     expect(service).toBeTruthy();
   });
 });

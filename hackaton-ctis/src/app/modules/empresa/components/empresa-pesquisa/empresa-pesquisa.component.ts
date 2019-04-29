@@ -1,29 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-
+import { EmpresaService } from '../../services/empresa.service';
+import { EmpresaModels } from '../../models/empresa-models';
 @Component({
   selector: 'app-empresa-pesquisa',
   templateUrl: './empresa-pesquisa.component.html',
   styleUrls: ['./empresa-pesquisa.component.scss']
 })
 export class EmpresaPesquisaComponent implements OnInit {
-  empresas = [
-    {
-      nomeEmpresa: 'Sonda',
-      id: 1
-    },
-    {
-      nomeEmpresa: 'CTIS',
-      id: 2
-    },
-    {
-      nomeEmpresa: 'Unifacsa',
-      id: 3
-    }
-  ];
-
-  constructor() { }
+  empresas : EmpresaModels[];
+  constructor(private service: EmpresaService) { }
 
   ngOnInit() {
+
   }
+
+  listarEmpresas(){
+    this.service.get().subscribe(res => this.empresas = res);
+  }
+
 
 }

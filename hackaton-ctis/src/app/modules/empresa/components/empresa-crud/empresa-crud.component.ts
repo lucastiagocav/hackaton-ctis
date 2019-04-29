@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-
 @Component({
   selector: 'app-empresa-crud',
   templateUrl: './empresa-crud.component.html',
@@ -9,6 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EmpresaCrudComponent implements OnInit {
   formulario: FormGroup;
+  endereco: FormGroup;
+  telefone: FormGroup;
+
 
   constructor(private formBuilder: FormBuilder, private router: Router, private routeatv: ActivatedRoute) { }
 
@@ -25,16 +27,18 @@ export class EmpresaCrudComponent implements OnInit {
       nomeFantasia: [''],
       email: [''],
       cnpj: [''],
-      //Entidade Telefone
-      telefoneEmpresa: [''],
       //Endereço
       rua: [''],
       bairro: [''],
       numero: [''],
       complemento: [''],
       cidade: [''],
-      estado: ['']
-    });
+      estado: [''],
+      //Entidade Telefone
+      telefoneEmpresa: ['']
+    })
+
+
   }
   verificarOpcao() {
     this.routeatv.params.subscribe(params => {
@@ -45,6 +49,9 @@ export class EmpresaCrudComponent implements OnInit {
   }
   carregarDados() {
 
+  }
+
+  addEmpresa() {
   }
   apresentarView() {
     if (this.router.url.indexOf('empresa/visualizar') > -1) {

@@ -7,19 +7,19 @@
       <h4>Dados Pessoais</h4>
       <form [formGroup]="formulario">
         <label for="nome" class="control-label">Nome</label>
-        <input type="text" class="form-control" placeholder="Nome" formControlName='nome'>
+        <input type="text" class="form-control" placeholder="Digite seu primeiro nome" formControlName='nome'>
 
         <label for="sobrenome" class="control-label">Sobrenome</label>
-        <input type="text" class="form-control" placeholder="Sobrenome" formControlName='sobrenome'>
+        <input type="text" class="form-control" placeholder="Digite seu último nome" formControlName='sobrenome'>
 
         <label for="cpf" class="control-label">CPF</label>
-        <input type="text" class="form-control" placeholder="ex: 123.456.789-15" formControlName='cpf'>
+        <input type="text" class="form-control" idMask="999.999.999-99" placeholder="Digite seu CPF" formControlName='cpf'>
 
         <label for="email" class="control-label">Email</label>
-        <input type="text" class="form-control" placeholder="nome@email.com" formControlName='email'>
+        <input type="text" class="form-control" placeholder="Digite o seu Email" formControlName='email'>
 
         <label for="telefone" class="control-label">Telefone</label>
-        <input type="text" class="form-control" placeholder="ex: (11) 9000-1000" formControlName='telefone'>
+        <input type="text" class="form-control" placeholder="Digite seu Telefone" formControlName='telefone'>
 
       </form>
     </div>
@@ -49,7 +49,7 @@
       </form>
 
     </div>
-      <button type="button" class="btn btn-primary btn-lg">Confirmar</button>
+      <button type="button" class="btn btn-primary btn-lg" (click)="addPessoa()" >Confirmar</button>
       <button type="button" routerLink="" class="btn btn-secondary btn-lg ml-2">Cancelar</button>
     </div>
   </div>
